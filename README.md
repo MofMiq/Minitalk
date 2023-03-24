@@ -10,5 +10,5 @@ Only SIGUSR1 and SIGUSR2 can be used.
 
 # Bonus
 
-- The server confirms every signal received by sending a signal to the client. (Not implemented)
+- The server confirms every signal received by sending a signal to the client.
 - Support Unicode characters!
