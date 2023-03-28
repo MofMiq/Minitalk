@@ -6,18 +6,21 @@
 /*   By: marirodr <marirodr@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/16 16:12:48 by marirodr          #+#    #+#             */
-/*   Updated: 2023/03/27 15:35:13 by marirodr         ###   ########.fr       */
+/*   Updated: 2023/03/28 13:00:03 by marirodr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minitalk.h"
 
 /*
-kill: enviar.
-usleep: crear un delay que permite que el receptor tenga tiempo suficiente para
-procesar la señal.
-"descompone" el byte y lo envia al server. se definen las señales SIGUSR1 y
-SIGUSR2:si es un 1 envia  SIGUSR1, si es 0, envia SIGUSR2
+This function sends a message in the form of a byte of data between different 
+processes. The function operates by iterating over the bits in the byte parameter
+and sending a signal to a process based on the value of each bit. Specifically,
+for each bit in the byte, the function checks whether it is a 1 or a 0. If it is
+a 1, the function sends the SIGUSR1 signal to the process. If it is a 0, the fun-
+ction sends the SIGUSR2 signal. After each signal is sent, the function waits
+for a short period of time using the usleep function before moving on to the 
+next bit.
 */
 
 void	ft_send_msg(int pid, char byte)
@@ -36,9 +39,11 @@ void	ft_send_msg(int pid, char byte)
 	}
 }
 
-/*esta funcion se utiliza como manejador de señales. si recibe uan señal SIGUSR1
-muestra un mensaje indicando  que el mensaje ha sido recibido correctamente por
-el server.*/
+/*
+This function is used as a signal handler. If it receives a SIGUSR1 signal, it
+displays a message indicating that the message has been received correctly by
+the server
+*/
 
 void	ft_handler(int a)
 {
@@ -47,16 +52,15 @@ void	ft_handler(int a)
 			END);
 }
 
-/*el programa recibe dos argumentos en la linea de comando: el pid y un texto.
-cconvertimos el pid en un entero con ft_atoi. ademas, se crea una estructura
-'sigaction' (msg) que apunta al manejador de señales ft_handler y se inicializa
-la estructura 'sig' para configurar el comportamiento de la señal SIGUSR1 
-utilizando al funcion 'sigaction' -en este caso, para que cuando reciba del
-server la señal SIGUSR1, que significa que el mensaje ha terminado de recibirse
-, que ejecute la funcion 'ft_handler'. luego se envia
-cada caracter del texto utilizando la funcion 'ft_send_msg'. Cuando todos los
-caracteres del mensaje se han enviado, se envia un caracter nulo para indicar
-el final del mismo.*/
+/*The program receives two arguments in the command line: the PID and a text.
+The PID is converted to an integer using ft_atoi. In addition, a sigaction
+structure (msg) is created that points to the signal handler ft_handler, and
+the sig structure is initialized to configure the behavior of the SIGUSR1 signal
+using the sigaction function. When the server sends the SIGUSR1 signal, the 
+ft_handler function is executed, indicating that the message has been received
+correctly by the server. Then, each character of the text is sent using the 
+ft_send_msg function. When all the characters of the message have been sent, 
+a null character is sent to indicate the end of the message.*/
 
 int	main(int argc, char **argv)
 {
