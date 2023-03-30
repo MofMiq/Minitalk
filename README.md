@@ -1,3 +1,15 @@
+```
+	  ██╗   ██╗██╗██╗   ██╗ █████╗     ███╗   ███╗██╗   ██╗██████╗  ██████╗██╗ █████╗
+	  ██║   ██║██║██║   ██║██╔══██╗    ████╗ ████║██║   ██║██╔══██╗██╔════╝██║██╔══██║
+	  ██║   ██║██║██║   ██║███████║    ██╔████╔██║██║   ██║██████╔╝██║     ██║███████║
+	  ╚██╗ ██╔╝██║╚██╗ ██╔╝██╔══██║    ██║╚██╔╝██║██║   ██║██╔══██╗██║     ██║██╔══██║
+	   ╚████╔╝ ██║ ╚████╔╝ ██║  ██║    ██║ ╚═╝ ██║╚██████╔╝██║  ██║╚██████╗██║██║  ██║
+	    ╚═══╝  ╚═╝  ╚═══╝  ╚═╝  ╚═╝    ╚═╝     ╚═╝ ╚═════╝ ╚═╝  ╚═╝ ╚═════╝╚═╝╚═╝  ╚═╝
+
+  	             PID: 62851			             By: las chorizo
+  	⊱ ──────────────────────────────── {.⋅ ✯ ⋅.} ───────────────────────────────── ⊰
+  
+  ```
 # Minitalk
 
 Create a communication program in the form of a client and server. The server must be launched first, and after being launched it must display its PID. The client must communicate the string passed as a parameter to the server. Once the string has been received, the server must display it. Communication between your programs should ONLY be done using UNIX signals.
