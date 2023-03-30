@@ -6,7 +6,7 @@
 /*   By: marirodr <marirodr@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/23 12:50:13 by marirodr          #+#    #+#             */
-/*   Updated: 2022/10/28 12:40:34 by marirodr         ###   ########.fr       */
+/*   Updated: 2023/03/27 17:05:28 by marirodr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,16 +42,3 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	}
 	return (0);
 }
-
-/*int main () 
-{
-	const char haystack[40] = "yo soy rosa, yo lima, y yo lavanda";
-	const char needle[0] = "";
-	char *result;
-
-    result = ft_strnstr(haystack, needle, 40);
-	printf("The substring is: %s\n", result);
-	printf("original:%s\n", strnstr(haystack, needle, 40));
-	return(0);
-}
-*/

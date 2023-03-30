@@ -6,7 +6,7 @@
 /*   By: marirodr <marirodr@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/23 16:09:26 by marirodr          #+#    #+#             */
-/*   Updated: 2022/10/28 12:40:24 by marirodr         ###   ########.fr       */
+/*   Updated: 2023/03/27 17:03:57 by marirodr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,15 +40,3 @@ int	ft_atoi(const char *str)
 	}
 	return (nb * sign);
 }
-
-/*int main()
-
-{
-	char	*str;
-
-	str = "   +--+-+-+54asdf2";
-	printf("the result of my function is: %d\n", ft_atoi(str));
-	printf("the result the original is: %d\n", atoi(str));
-	return 0;
-}
-*/

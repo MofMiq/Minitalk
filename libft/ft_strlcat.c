@@ -6,7 +6,7 @@
 /*   By: marirodr <marirodr@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 14:42:23 by marirodr          #+#    #+#             */
-/*   Updated: 2022/10/24 11:42:58 by marirodr         ###   ########.fr       */
+/*   Updated: 2023/03/27 17:04:50 by marirodr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,13 +41,3 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	dst[i] = '\0';
 	return (lend + lens);
 }
-
-/*int	main(void)
-{
-	char dest[10] = "ab";
-	char src[10] = "zxy";
-	int size = 2;
-	printf("original:%lu\n", strlcat(dest, src, size));
-	printf("ft_strlcat:%zu\n", ft_strlcat(dest, src, size));
-}
-*/

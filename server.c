@@ -6,7 +6,7 @@
 /*   By: marirodr <marirodr@student.42malaga.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/16 14:12:53 by marirodr          #+#    #+#             */
-/*   Updated: 2023/03/28 13:25:06 by marirodr         ###   ########.fr       */
+/*   Updated: 2023/03/29 16:12:18 by marirodr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,12 +100,3 @@ int	main(void)
 	}
 	return (0);
 }
-
-/*sigemptyset(&msg.sa_mask) -> sigemptyset: inicializa el conjunto de señales
-vacio;
-sigaddset(&msg.sa_mask, SIGUSR1) -> sigaddset: agrega una señal especifica al
-conjunto de señales;
-sigaddset(&msg.sa_mask, SIGUSR2);
-estas funciones se encargan de configurar correctamente la mascara de señales
-para evitar recibir señales no deseadas que afecten al la ejecucion normal
-del programa.*/
