@@ -34,3 +34,5 @@ Only SIGUSR1 and SIGUSR2 can be used.
 3️⃣ Open a new terminal and execute ```./client <server PID> <"The message you want to send to the server">```
 
 4️⃣ Ctr + z to stop the program
+
+Subject version: 2
